@@ -1,0 +1,22 @@
+{
+  "strategy_id": "25864ad5-45b8-4e55-ac4d-57502e885099",
+  "overallProfit": 0,
+  "estimated_margin": 100000,
+  "average_day_profit": 0,
+  "average_monthly_profit": 0,
+  "max_profit": 0,
+  "max_loss": 0,
+  "loss_percentage_days": 0,
+  "win_percentage_days": 0,
+  "average_profit_on_win_days": 0,
+  "max_winning_streak": 0,
+  "max_losing_streak": 0,
+  "winning_streak_count": {},
+  "losing_streak_count": {},
+  "average_loss_on_loss_days": 0,
+  "max_drawdown": 0,
+  "max_drawdown_recovery_days": 0,
+  "leg_analytic_by_day": null,
+  "total_brokerage_and_charges": 0,
+  "show_mtm_exit_type": true
+}

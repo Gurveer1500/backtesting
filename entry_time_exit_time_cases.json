@@ -1,0 +1,155 @@
+[
+    {
+        "name": "Entry Time: 09:14:00, Exit Time: 15:15:00",
+        "payload": {
+            "re_compute": true,
+            "underlying": "NIFTY",
+            "strategy_name": "",
+            "strategy_type": "intraday",
+            "entry_time": "09:14:00",
+            "exit_time": "15:15:00",
+            "start_date": "28/11/2024",
+            "end_date": "27/11/2025",
+            "range_break_out_time": "",
+            "ltp_candle_field": "",
+            "square_off_one_leg": true,
+            "square_off_all_leg": false,
+            "move_sl_to_cost": false,
+            "legs": [
+                {
+                    "include": true,
+                    "leg_id": "a47d75b2-9c6e-46d0-87f3-04efb0227940",
+                    "leg_name": "L1",
+                    "strike_criteria_config": {
+                        "strike_criteria": "atm_point",
+                        "closest_premium_type": "",
+                        "closest_premium": 0,
+                        "multiplier": 0,
+                        "closest_premium_by_sp_percent": 0,
+                        "points_change": 0
+                    },
+                    "option_type": "CE",
+                    "action_type": "buy",
+                    "expiry": "weekly",
+                    "qty": 1
+                }
+            ],
+            "lot_setting": {
+                "slippage_percentage": 0.5,
+                "brokerage_charges": 20
+            },
+            "strategy_protect_profit_config": {},
+            "strategy_target_profit": {
+                "type": "total_mtm"
+            },
+            "strategy_stop_loss": {
+                "type": "total_mtm"
+            }
+        },
+        "expected": {
+            "status": 400
+        }
+    },
+    {
+        "name": "Entry Time: 09:20:00, Exit Time: 09:15:00",
+        "payload": {
+            "re_compute": true,
+            "underlying": "NIFTY",
+            "strategy_name": "",
+            "strategy_type": "intraday",
+            "entry_time": "09:20:00",
+            "exit_time": "09:15:00",
+            "start_date": "28/11/2024",
+            "end_date": "27/11/2025",
+            "range_break_out_time": "",
+            "ltp_candle_field": "",
+            "square_off_one_leg": true,
+            "square_off_all_leg": false,
+            "move_sl_to_cost": false,
+            "legs": [
+                {
+                    "include": true,
+                    "leg_id": "a47d75b2-9c6e-46d0-87f3-04efb0227940",
+                    "leg_name": "L1",
+                    "strike_criteria_config": {
+                        "strike_criteria": "atm_point",
+                        "closest_premium_type": "",
+                        "closest_premium": 0,
+                        "multiplier": 0,
+                        "closest_premium_by_sp_percent": 0,
+                        "points_change": 0
+                    },
+                    "option_type": "CE",
+                    "action_type": "buy",
+                    "expiry": "weekly",
+                    "qty": 1
+                }
+            ],
+            "lot_setting": {
+                "slippage_percentage": 0.5,
+                "brokerage_charges": 20
+            },
+            "strategy_protect_profit_config": {},
+            "strategy_target_profit": {
+                "type": "total_mtm"
+            },
+            "strategy_stop_loss": {
+                "type": "total_mtm"
+            }
+        },
+        "expected": {
+            "status": 400
+        }
+    },
+    {
+        "name": "Entry Time: 09:20:00, Exit Time: 16:00:00",
+        "payload": {
+            "re_compute": true,
+            "underlying": "NIFTY",
+            "strategy_name": "",
+            "strategy_type": "intraday",
+            "entry_time": "09:20:00",
+            "exit_time": "09:15:00",
+            "start_date": "28/11/2024",
+            "end_date": "27/11/2025",
+            "range_break_out_time": "",
+            "ltp_candle_field": "",
+            "square_off_one_leg": true,
+            "square_off_all_leg": false,
+            "move_sl_to_cost": false,
+            "legs": [
+                {
+                    "include": true,
+                    "leg_id": "a47d75b2-9c6e-46d0-87f3-04efb0227940",
+                    "leg_name": "L1",
+                    "strike_criteria_config": {
+                        "strike_criteria": "atm_point",
+                        "closest_premium_type": "",
+                        "closest_premium": 0,
+                        "multiplier": 0,
+                        "closest_premium_by_sp_percent": 0,
+                        "points_change": 0
+                    },
+                    "option_type": "CE",
+                    "action_type": "buy",
+                    "expiry": "weekly",
+                    "qty": 1
+                }
+            ],
+            "lot_setting": {
+                "slippage_percentage": 0.5,
+                "brokerage_charges": 20
+            },
+            "strategy_protect_profit_config": {},
+            "strategy_target_profit": {
+                "type": "total_mtm"
+            },
+            "strategy_stop_loss": {
+                "type": "total_mtm"
+            }
+        },
+        "expected": {
+            "status": 400
+        }
+    }
+]
