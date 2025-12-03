@@ -1,10 +1,11 @@
 import { configDotenv } from "dotenv"
 
 export async function login() {
-    configDotenv()
+    configDotenv({quiet: true})
     const baseUrl = process.env.BASE_URL
     const userKey = process.env.USER_KEY
-
+    console.log(baseUrl);
+    
     const sendOTP = baseUrl + "/user/login/otp/send"
     const res = await fetch(sendOTP, {
         headers: {

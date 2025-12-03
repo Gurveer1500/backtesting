@@ -4,7 +4,7 @@ import { configDotenv } from 'dotenv';
 
 
 export async function compute(path, expected_testcase_path, cookie, userId) {
-    configDotenv()
+    configDotenv({quiet: true})
     const baseUrl = process.env.BASE_URL
     const endpoint = baseUrl+"/backtesting/compute"
     let result = {
