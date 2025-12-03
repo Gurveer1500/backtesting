@@ -1,4 +1,4 @@
-import { getExpected, getTestCases } from "../get_data.js"
+import { getExpected, getTestCases } from "../getData.js"
 
 export function getAssertions() {
     const cases = getTestCases()
