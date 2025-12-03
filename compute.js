@@ -31,9 +31,16 @@ export async function compute(path, expected_testcase_path, cookie, userId) {
         });
 
         const respBody = await res.json()
-        console.log(respBody);
-        
-        const err = deepCompare(respBody.data, expected) 
+        // console.log(respBody);
+
+        let err
+
+        if (!respBody.data) {
+            err = deepCompare(respBody, expected)
+        } else {
+            err = deepCompare(respBody.data, expected) 
+        }
+
 
         if (err) {
             console.error("FAILED: ", tc.name)

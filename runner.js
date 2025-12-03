@@ -27,5 +27,4 @@ export async function run(cases, cookie, userId) {
     }
 }
 
-run()
 
