@@ -1,14 +1,16 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, } from 'fs';
 import { deepCompare } from './compare.js';
+import { configDotenv } from 'dotenv';
 
-const endpoint = "https://x-services-dev.optionsutra.com/api/v1/backtesting/compute"
 
-export async function compute(path, expected_testcase_path) {
+export async function compute(path, expected_testcase_path, cookie, userId) {
+    configDotenv()
+    const baseUrl = process.env.BASE_URL
+    const endpoint = baseUrl+"/backtesting/compute"
     let result = {
         passed: 0,
         failed: 0
     }
-
 
     const tc = JSON.parse(readFileSync(path, "utf-8"));
     const expected = JSON.parse(readFileSync(expected_testcase_path, "utf-8"))
@@ -22,27 +24,21 @@ export async function compute(path, expected_testcase_path) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "x-user-id": "20a8ea91-f696-4b05-b8d4-1162e30f7231",
-                "cookie": "at=zIDJK4fhiAQWQeIbAG0usK5nmLWTWaJhhqcJd3DA1to="
+                "x-user-id": ""+userId,
+                "cookie": ""+cookie
             },
             body: JSON.stringify(tc.payload)
         });
 
         const respBody = await res.json()
-        // console.log(respBody.data);
+        console.log(respBody);
         
-        const err = deepCompare(respBody.data, expected)
+        const err = deepCompare(respBody.data, expected) 
 
         if (err) {
             console.error("FAILED: ", tc.name)
-            // console.error("Expected :", expected);
-            writeFileSync("expected.json", JSON.stringify(expected, null, 2))
-            // console.error("Received :", respBody.data);
-            writeFileSync("testcase.json", JSON.stringify(respBody.data, null, 2))
-            // console.log(respBody);
-
-            failed++;
-            
+            console.log(err);
+            failed++; 
         }
         // console.error("Expected :", expected);
         // console.error("Received :", respBody.data);

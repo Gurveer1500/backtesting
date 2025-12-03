@@ -1,23 +1,11 @@
-// import { compute } from "./compute";
 import { compute } from "./compute.js";
-import { getTestCases, getExpected } from "./get_data.js";
 
-
-
-async function run() {
-    // let result = {
-    //     passed: 0,
-    //     failed: 0
-    // }   
-
-    const cases = getTestCases()
-    const expected = getExpected()
-    for(let i = 0; i < cases.length; i++){
-        cases[i] = [cases[i], expected[i]]
-    }
-
+export async function run(cases, cookie, userId) {
+    console.log(cases);
+    // return
+    
     const output = await Promise.all(
-        cases.map(([tcPath, expectedPath]) => compute(tcPath, expectedPath))
+        cases.map(([tcPath, expectedPath]) => compute(tcPath, expectedPath, cookie, userId))
     )
     
     const result = output.reduce(
